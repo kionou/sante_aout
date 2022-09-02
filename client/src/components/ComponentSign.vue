@@ -239,6 +239,7 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin-top: 20px;
 
 }
 
