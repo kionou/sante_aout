@@ -58,7 +58,7 @@ export default {
             }
 
         console.log(Datamaladie);
-        axios.post('https://sante-kionou.herokuapp.com/maladie/maladiepost',Datamaladie)
+        axios.post('http://localhost:5000/maladie/maladiepost',Datamaladie)
                  .then((response) => {
                     console.log(response)
                     // if (response.data.alert) {

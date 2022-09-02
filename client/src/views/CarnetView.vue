@@ -41,14 +41,14 @@ export default {
 
         if (auth) {
            console.log("sfsdfg",auth);
-        //   axios.get('https://sante-kionou.herokuapp.com/users/detailuser',{ headers: {patient : localStorage.getItem('patient')}})
-        //  .then((response) =>{
-        //      console.log('response',response);
-        //      this.users= response.data
-        //  })
-        const response = await fetch("https://sante-kionou.herokuapp.com/users/detailuser",{ headers: {patient : localStorage.getItem('patient')}});
-        const data = await response.json();
-        console.log("dsFdsq",JSON.parse(data));
+          axios.get('http://localhost:5000/users/detailuser',{ headers: {patient : localStorage.getItem('patient')}})
+         .then((response) =>{
+             console.log('response',response);
+             this.users= response.data.user
+         })
+        // const response = await fetch("http://localhost:5000/users/detailuser",{ headers: {patient : localStorage.getItem('patient')}});
+        // const data = await response.json();
+        // console.log("dsFdsq",JSON.parse(data));
           
         }else{
           console.log('nono');

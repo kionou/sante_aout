@@ -74,7 +74,7 @@ export default {
                     id_doctor:this.doctor
                 }
 
-                   axios.post('https://sante-kionou.herokuapp.com/vaccin/vaccinpost',DataVaccin)
+                   axios.post('http://localhost:5000/vaccin/vaccinpost',DataVaccin)
                   .then((response) => {
                     console.log('message',response.data)
                     

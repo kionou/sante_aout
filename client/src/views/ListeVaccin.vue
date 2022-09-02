@@ -44,7 +44,7 @@ export default {
 
         if (auth) {
           // console.log("sfsdfg",auth);
-          axios.get('https://sante-kionou.herokuapp.com/vaccin/detailvaccin',{ headers: {patient : localStorage.getItem('patient')}})
+          axios.get('http://localhost:5000/vaccin/detailvaccin',{ headers: {patient : localStorage.getItem('patient')}})
          .then((response) =>{
               console.log('response',response.data.alert);
               if (response.data.alert) {

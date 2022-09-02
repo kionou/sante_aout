@@ -4,7 +4,7 @@
            
            <div class="text">
                <p>Carnet de {{user.prenom}}</p>
-               <p class="date">Nee en 2008(13 ans 8mois)</p>
+               <p class="date">Nee  {{user.date_naissance}}</p>
            </div>
         
        <div class="cve" @click="redirect">

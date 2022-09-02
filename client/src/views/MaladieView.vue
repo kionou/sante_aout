@@ -39,7 +39,7 @@ export default {
 
         if (auth) {
           console.log("sfsdfg",auth);
-          axios.get('https://sante-kionou.herokuapp.com/maladie/affichemaladie',{ headers: {patient : localStorage.getItem('patient')}})
+          axios.get('http://localhost:5000/maladie/affichemaladie',{ headers: {patient : localStorage.getItem('patient')}})
          .then((response) =>{
              console.log('response',response.data);
               this.maladies= response.data.maladie

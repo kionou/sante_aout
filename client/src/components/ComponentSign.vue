@@ -172,7 +172,7 @@ export default {
                     date_naissance:this.date_naissance,
                     password:this.password
                 }
-                  axios.post('https://sante-kionou.herokuapp.com/users/userpost',DataUser)
+                  axios.post('http://localhost:5000/users/userpost',DataUser)
                  .then((response) => {
                     console.log(response)
                     if (response.data.alert) {

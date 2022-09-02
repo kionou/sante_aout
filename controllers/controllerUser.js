@@ -63,15 +63,12 @@ const UserControler = class{
        console.log('kjfb<kj',token);
        let verifier = jsonwt.VerifierToken(token)
         console.log('yhunkgbb',verifier);
-        let user = await dataUser.DetailUserId(1)
-        let users = await dataUser.DetailUserId(verifier.id)
-        res.send(JSON.stringify({
-            "nom":user.success[0].nom,
-            "prenom":user.success[0].prenom,
-            "user":user.success,
-            "users":users.success
+        // let user = await dataUser.DetailUserId(1)
+        let user = await dataUser.DetailUserId(verifier.id)
+        res.json({"user":user.success
+            
 
-        }))
+        }) 
     }
 
     static AfficherUserAll = async(req=request,res=response)=>{

@@ -37,7 +37,7 @@ export default {
 
         if (auth) {
           console.log("sfsdfg",auth);
-          axios.get('https://sante-kionou.herokuapp.com/doctor/detaildoctor',{ headers: {doctor : localStorage.getItem('doctor')}})
+          axios.get('http://localhost:5000/doctor/detaildoctor',{ headers: {doctor : localStorage.getItem('doctor')}})
          .then((response) =>{
              console.log('response',response.data);
              this.doctors= response.data.doctor

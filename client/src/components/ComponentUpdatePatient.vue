@@ -85,7 +85,7 @@ export default {
                    
                 }
                 console.log("dsqf",DataUser);
-                   axios.post('https://sante-kionou.herokuapp.com/users/updateuser',DataUser)
+                   axios.post('http://localhost:5000/users/updateuser',DataUser)
                   .then((response) => {
                     console.log('message',response.data)
                     
