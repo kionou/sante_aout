@@ -25,7 +25,7 @@ export default{
         this.$router.push({path:'/login'})
         
       }else{
-        this.$router.push({path:'/carnet'})
+        this.$router.replace({path:'/carnet'})
 
       }
     },

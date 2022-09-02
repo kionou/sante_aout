@@ -71,7 +71,7 @@ export default{
             this.$router.push({ path: '/sign'})
         },
         submit(){
-            
+            console.log('fsqjfblqkf',this.v$.$errors.length);
             // this.v$.$validate()
             this.v$.$touch()
             if (this.v$.$errors.length == 0 ) {
@@ -83,7 +83,7 @@ export default{
 
                    axios.post('https://sante-kionou.herokuapp.com/users/userconnexion',DataUser)
                   .then((response) => {
-                    console.log('message',response.data.data)
+                    console.log('message',response)
                     
 
                     if (response.data.data) {

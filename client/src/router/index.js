@@ -86,7 +86,18 @@ const routes = [
     component: () => import( '../views/UpdatePatient.vue'),
     props:true
   },
-
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import( '../views/AdminView.vue'),
+    props:true
+  },
+  {
+    path: '/admindoctor',
+    name: 'admindoctor',
+    component: () => import( '../views/AdminAddDoctor.vue'),
+    props:true
+  },
  
  
 ]
