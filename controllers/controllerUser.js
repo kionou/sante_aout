@@ -62,8 +62,11 @@ const UserControler = class{
        let token = req.headers.patient
        let verifier = jsonwt.VerifierToken(token)
         console.log('yhunkgbb',verifier);
-         let user = await dataUser.DetailUserId(verifier.id)
-        res.json({"user":user.success}) 
+         let user = await dataUser.DetailUserId(1)
+        res.json({
+            "nom":user.success[0].nom,
+            "prenom":user.success[0].prenom
+        }) 
     }
 
     static AfficherUserAll = async(req=request,res=response)=>{
