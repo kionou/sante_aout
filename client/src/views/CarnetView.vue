@@ -41,7 +41,7 @@ export default {
 
         if (auth) {
           console.log("sfsdfg",auth);
-          axios.get('ec2-52-31-70-136.eu-west-1.compute.amazonaws.com/users/detailuser',{ headers: {patient : localStorage.getItem('patient')}})
+          axios.get('https://sante-kionou.herokuapp.com/users/detailuser',{ headers: {patient : localStorage.getItem('patient')}})
          .then((response) =>{
              console.log('response',response);
              this.users= response.data.user
