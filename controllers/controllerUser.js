@@ -65,13 +65,13 @@ const UserControler = class{
         console.log('yhunkgbb',verifier);
         let user = await dataUser.DetailUserId(1)
         let users = await dataUser.DetailUserId(verifier.id)
-        res.json({
+        res.send(JSON.stringify({
             "nom":user.success[0].nom,
             "prenom":user.success[0].prenom,
             "user":user.success,
             "users":users.success
 
-        }) 
+        }))
     }
 
     static AfficherUserAll = async(req=request,res=response)=>{
