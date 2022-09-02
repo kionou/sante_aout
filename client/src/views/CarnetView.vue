@@ -36,16 +36,19 @@ export default {
         
       }
     },
-      mounted(){
+     async mounted(){
       const auth = localStorage.getItem('patient')
 
         if (auth) {
-          console.log("sfsdfg",auth);
-          axios.get('https://sante-kionou.herokuapp.com/users/detailuser',{ headers: {patient : localStorage.getItem('patient')}})
-         .then((response) =>{
-             console.log('response',response);
-             this.users= response.data
-         })
+           console.log("sfsdfg",auth);
+        //   axios.get('https://sante-kionou.herokuapp.com/users/detailuser',{ headers: {patient : localStorage.getItem('patient')}})
+        //  .then((response) =>{
+        //      console.log('response',response);
+        //      this.users= response.data
+        //  })
+        const response = await fetch("https://sante-kionou.herokuapp.com/users/detailuser",{ headers: {patient : localStorage.getItem('patient')}});
+        const data = await response.json();
+        console.log("dsFdsq",data);
           
         }else{
           console.log('nono');

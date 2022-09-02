@@ -69,7 +69,7 @@ const UserControler = class{
             "nom":user.success[0].nom,
             "prenom":user.success[0].prenom,
             "user":user.success,
-            "users":user.success
+            "users":users.success
 
         }) 
     }
