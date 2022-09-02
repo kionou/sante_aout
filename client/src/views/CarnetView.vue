@@ -45,7 +45,6 @@ export default {
          .then((response) =>{
              console.log('response',response);
              this.users= response.data.user
-           
          })
           
         }else{
