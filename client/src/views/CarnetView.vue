@@ -48,7 +48,7 @@ export default {
         //  })
         const response = await fetch("https://sante-kionou.herokuapp.com/users/detailuser",{ headers: {patient : localStorage.getItem('patient')}});
         const data = await response.json();
-        console.log("dsFdsq",data);
+        console.log("dsFdsq",JSON.parse(data));
           
         }else{
           console.log('nono');
