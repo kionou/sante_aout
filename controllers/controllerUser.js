@@ -60,12 +60,17 @@ const UserControler = class{
 
     static AfficheDetailUserId = async(req=request,res=response)=>{
        let token = req.headers.patient
+       console.log('kjfb<kj',token);
        let verifier = jsonwt.VerifierToken(token)
         console.log('yhunkgbb',verifier);
-         let user = await dataUser.DetailUserId(1)
+        let user = await dataUser.DetailUserId(1)
+        let users = await dataUser.DetailUserId(verifier.id)
         res.json({
             "nom":user.success[0].nom,
-            "prenom":user.success[0].prenom
+            "prenom":user.success[0].prenom,
+            "user":user.success,
+            "users":user.success
+
         }) 
     }
 
